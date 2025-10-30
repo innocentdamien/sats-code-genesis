@@ -1,6 +1,7 @@
-import { Bitcoin, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import satscodeLogo from "@/assets/satscode-logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,9 +29,13 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <button 
             onClick={() => scrollToSection("home")}
-            className="flex items-center gap-2 group"
+            className="flex items-center gap-3 group"
           >
-            <Bitcoin className="w-8 h-8 text-accent transition-transform duration-300 group-hover:rotate-180" />
+            <img 
+              src={satscodeLogo} 
+              alt="SatsCode Logo" 
+              className="w-12 h-12 transition-transform duration-300 group-hover:scale-110"
+            />
             <span className="text-xl font-bold bg-gradient-accent bg-clip-text text-transparent">
               SatsCode
             </span>

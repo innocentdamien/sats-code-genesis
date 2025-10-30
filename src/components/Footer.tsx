@@ -1,4 +1,5 @@
-import { Bitcoin, Twitter, Github, Mail } from "lucide-react";
+import { Twitter, Github, Mail } from "lucide-react";
+import satscodeLogo from "@/assets/satscode-logo.png";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -13,8 +14,12 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <Bitcoin className="w-8 h-8 text-accent" />
+            <div className="flex items-center gap-3 mb-4">
+              <img 
+                src={satscodeLogo} 
+                alt="SatsCode Logo" 
+                className="w-10 h-10"
+              />
               <span className="text-xl font-bold bg-gradient-accent bg-clip-text text-transparent">
                 SatsCode
               </span>
