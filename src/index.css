@@ -8,54 +8,56 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
+    --background: 220 30% 96%;
+    --foreground: 220 20% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 220 20% 10%;
 
-    --popover: 222 47% 7%;
+    --popover: 220 40% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 222 47% 11%;
+    --primary: 220 40% 12%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 214 32% 91%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 220 20% 90%;
+    --secondary-foreground: 220 20% 10%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 220 20% 92%;
+    --muted-foreground: 220 15% 45%;
 
     --accent: 43 50% 58%;
-    --accent-foreground: 222 47% 11%;
+    --accent-foreground: 220 40% 12%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
     --ring: 43 50% 58%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
     /* Gold from logo */
     --bitcoin-gold: 43 50% 58%;
     --bitcoin-gold-glow: 43 60% 68%;
     
-    /* Deep slate backgrounds */
-    --slate-darker: 222 47% 7%;
-    --slate-dark: 215 28% 17%;
-    --slate-medium: 217 19% 27%;
+    /* Deep dark backgrounds */
+    --slate-darker: 220 40% 8%;
+    --slate-dark: 220 35% 12%;
+    --slate-medium: 220 30% 18%;
+    --slate-card: 220 30% 15%;
     
     /* Gradients with gold */
-    --gradient-hero: linear-gradient(135deg, hsl(222 47% 7%) 0%, hsl(215 28% 17%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 40% 8%) 0%, hsl(220 35% 12%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220 30% 15%) 0%, hsl(220 30% 18%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(43 50% 58%) 0%, hsl(43 60% 68%) 100%);
+    --gradient-glow: radial-gradient(circle at 30% 50%, hsl(43 50% 58% / 0.15) 0%, transparent 60%);
     
     /* Shadows with gold glow */
-    --shadow-glow: 0 0 40px hsl(43 50% 58% / 0.4);
-    --shadow-card: 0 4px 20px hsl(222 47% 11% / 0.08);
-    --shadow-elevated: 0 10px 40px hsl(222 47% 11% / 0.12);
+    --shadow-glow: 0 0 60px hsl(43 50% 58% / 0.5);
+    --shadow-card: 0 8px 32px hsl(220 40% 5% / 0.4);
+    --shadow-elevated: 0 20px 60px hsl(220 40% 5% / 0.6);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -63,32 +65,32 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222 47% 7%;
+    --background: 220 40% 8%;
     --foreground: 0 0% 98%;
 
-    --card: 215 28% 17%;
+    --card: 220 30% 15%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 215 28% 12%;
+    --popover: 220 35% 10%;
     --popover-foreground: 0 0% 98%;
 
     --primary: 0 0% 98%;
-    --primary-foreground: 222 47% 11%;
+    --primary-foreground: 220 40% 12%;
 
-    --secondary: 217 19% 27%;
+    --secondary: 220 30% 20%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 217 19% 27%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 220 30% 20%;
+    --muted-foreground: 220 15% 65%;
 
     --accent: 43 50% 58%;
-    --accent-foreground: 222 47% 11%;
+    --accent-foreground: 220 40% 12%;
 
-    --destructive: 0 63% 31%;
+    --destructive: 0 63% 40%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 217 19% 27%;
-    --input: 217 19% 27%;
+    --border: 220 30% 22%;
+    --input: 220 30% 22%;
     --ring: 43 50% 58%;
   }
 }
@@ -99,6 +101,6 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-slate-darker text-foreground;
   }
 }

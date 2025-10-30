@@ -10,7 +10,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-slate-darker text-primary-foreground py-12 border-t border-border">
+    <footer className="bg-slate-dark text-primary-foreground py-12 border-t border-border/50">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
@@ -91,19 +91,19 @@ const Footer = () => {
             <div className="flex gap-4">
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-slate-card border border-border/50 flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all duration-300"
               >
                 <Twitter className="w-5 h-5" />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-slate-card border border-border/50 flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all duration-300"
               >
                 <Github className="w-5 h-5" />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-slate-card border border-border/50 flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all duration-300"
               >
                 <Mail className="w-5 h-5" />
               </a>
@@ -111,7 +111,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-border pt-8 text-center text-sm text-primary-foreground/60">
+        <div className="border-t border-border/50 pt-8 text-center text-sm text-primary-foreground/60">
           <p>© 2025 SatsCode. All rights reserved. Building sovereignty, one satoshi at a time.</p>
         </div>
       </div>

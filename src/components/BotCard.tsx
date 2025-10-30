@@ -31,30 +31,33 @@ const BotCard = ({
   };
 
   return (
-    <Card className="p-6 bg-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 border-border relative overflow-hidden group">
+    <Card className="p-8 bg-slate-card border-border/50 hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 relative overflow-hidden group">
       {comingSoon && (
-        <Badge className="absolute top-4 right-4 bg-accent text-accent-foreground">
+        <Badge className="absolute top-6 right-6 bg-gradient-accent text-accent-foreground border-0">
           Coming Soon
         </Badge>
       )}
+
+      {/* Glow effect on hover */}
+      <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
       
-      <div className="space-y-4">
+      <div className="space-y-6 relative z-10">
         <div>
-          <h3 className="text-2xl font-bold text-card-foreground mb-2">{name}</h3>
-          <p className="text-accent font-medium">{tagline}</p>
+          <h3 className="text-3xl font-bold text-card-foreground mb-2">{name}</h3>
+          <p className="text-accent font-semibold text-lg">{tagline}</p>
         </div>
 
-        <p className="text-muted-foreground leading-relaxed">{description}</p>
+        <p className="text-muted-foreground leading-relaxed text-base">{description}</p>
 
         {commandExample && (
-          <div className="bg-muted/50 rounded-lg p-3 font-mono text-sm flex items-center gap-2">
-            <Terminal className="w-4 h-4 text-accent" />
-            <code className="text-foreground">{commandExample}</code>
+          <div className="bg-slate-darker/50 rounded-xl p-4 font-mono text-sm flex items-center gap-3 border border-border/30">
+            <Terminal className="w-5 h-5 text-accent flex-shrink-0" />
+            <code className="text-primary-foreground">{commandExample}</code>
           </div>
         )}
 
         <div className="flex items-center justify-between pt-4">
-          <Badge variant="outline" className="border-accent/30 text-accent">
+          <Badge variant="outline" className="border-accent/40 text-accent bg-accent/5 px-4 py-1.5">
             {platform}
           </Badge>
           
@@ -63,6 +66,7 @@ const BotCard = ({
             onClick={handleClick}
             disabled={comingSoon}
             className="group-hover:shadow-glow"
+            size="lg"
           >
             {buttonText}
             {!comingSoon && <ExternalLink className="ml-2 w-4 h-4" />}

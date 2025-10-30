@@ -28,18 +28,21 @@ const Donation = () => {
   };
 
   return (
-    <section id="donate" className="py-24 bg-slate-darker text-primary-foreground">
-      <div className="container mx-auto px-4">
+    <section id="donate" className="py-24 bg-slate-dark relative overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl" />
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="w-20 h-20 rounded-full bg-gradient-accent flex items-center justify-center mx-auto mb-8 shadow-glow">
+          <div className="w-20 h-20 rounded-2xl bg-gradient-accent flex items-center justify-center mx-auto mb-8 shadow-glow">
             <Bitcoin className="w-10 h-10 text-accent-foreground" />
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary-foreground">
             Fuel the Mission
           </h2>
           
-          <p className="text-xl text-primary-foreground/80 mb-12 leading-relaxed">
+          <p className="text-xl text-primary-foreground/80 mb-12 leading-relaxed max-w-2xl mx-auto">
             SatsCode is committed to building a Bitcoin-powered future. Your donations directly support development, 
             server costs, and creating more open-source tools for the community.
           </p>
@@ -48,7 +51,7 @@ const Donation = () => {
             {addresses.map((addr, index) => (
               <Card 
                 key={index}
-                className="p-6 bg-card border-border hover:shadow-elevated transition-all duration-300"
+                className="p-6 bg-slate-card border-border/50 hover:shadow-elevated transition-all duration-300"
               >
                 <div className="space-y-4">
                   <div>
@@ -58,7 +61,7 @@ const Donation = () => {
                     <p className="text-sm text-muted-foreground">{addr.network}</p>
                   </div>
                   
-                  <div className="bg-muted/30 rounded-lg p-4 break-all font-mono text-sm text-foreground">
+                  <div className="bg-slate-darker/50 rounded-xl p-4 break-all font-mono text-sm text-foreground border border-border/30">
                     {addr.address}
                   </div>
                   

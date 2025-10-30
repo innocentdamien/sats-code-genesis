@@ -29,10 +29,13 @@ const Blog = () => {
   ];
 
   return (
-    <section id="blog" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="blog" className="py-24 bg-slate-darker relative overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl" />
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary-foreground">
             The SatsCode Blog
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -44,10 +47,10 @@ const Blog = () => {
           {articles.map((article, index) => (
             <Card 
               key={index}
-              className="p-6 bg-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-2 border-border flex flex-col"
+              className="p-6 bg-slate-card border-border/50 hover:shadow-elevated transition-all duration-300 hover:-translate-y-2 flex flex-col"
             >
               <div className="flex-1 space-y-4">
-                <Badge className="bg-accent/10 text-accent border-accent/20">
+                <Badge className="bg-accent/10 text-accent border-accent/30">
                   {article.category}
                 </Badge>
                 
@@ -73,7 +76,7 @@ const Blog = () => {
               
               <Button 
                 variant="ghost" 
-                className="w-full mt-6 group"
+                className="w-full mt-6 group hover:bg-accent/10 hover:text-accent"
               >
                 Read More
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />

@@ -24,10 +24,13 @@ const CAT = () => {
   ];
 
   return (
-    <section id="cat" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="cat" className="py-24 bg-slate-darker relative overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-accent/5 rounded-full blur-3xl" />
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary-foreground">
             Community. Action. Trust.
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -41,10 +44,10 @@ const CAT = () => {
             return (
               <Card 
                 key={index}
-                className="p-8 bg-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-2 border-border group"
+                className="p-8 bg-slate-card border-border/50 hover:shadow-elevated transition-all duration-300 hover:-translate-y-2 group"
               >
                 <div className="text-center space-y-6">
-                  <div className={`w-20 h-20 rounded-full bg-gradient-to-br ${pillar.gradient} flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                  <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${pillar.gradient} flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                     <Icon className="w-10 h-10 text-white" />
                   </div>
                   

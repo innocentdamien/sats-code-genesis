@@ -58,12 +58,14 @@ export default {
           darker: "hsl(var(--slate-darker))",
           dark: "hsl(var(--slate-dark))",
           medium: "hsl(var(--slate-medium))",
+          card: "hsl(var(--slate-card))",
         },
       },
       backgroundImage: {
         'gradient-hero': 'var(--gradient-hero)',
         'gradient-card': 'var(--gradient-card)',
         'gradient-accent': 'var(--gradient-accent)',
+        'gradient-glow': 'var(--gradient-glow)',
       },
       boxShadow: {
         'glow': 'var(--shadow-glow)',
