@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 25 95% 53%;
+    --accent: 43 50% 58%;
     --accent-foreground: 222 47% 11%;
 
     --destructive: 0 84% 60%;
@@ -34,26 +34,26 @@ All colors MUST be HSL.
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 25 95% 53%;
+    --ring: 43 50% 58%;
 
     --radius: 0.75rem;
 
-    /* Bitcoin Orange accent */
-    --bitcoin-orange: 25 95% 53%;
-    --bitcoin-orange-glow: 25 95% 53%;
+    /* Gold from logo */
+    --bitcoin-gold: 43 50% 58%;
+    --bitcoin-gold-glow: 43 60% 68%;
     
     /* Deep slate backgrounds */
     --slate-darker: 222 47% 7%;
     --slate-dark: 215 28% 17%;
     --slate-medium: 217 19% 27%;
     
-    /* Gradients */
+    /* Gradients with gold */
     --gradient-hero: linear-gradient(135deg, hsl(222 47% 7%) 0%, hsl(215 28% 17%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(25 95% 53%) 0%, hsl(25 95% 63%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(43 50% 58%) 0%, hsl(43 60% 68%) 100%);
     
-    /* Shadows with orange glow */
-    --shadow-glow: 0 0 40px hsl(25 95% 53% / 0.3);
+    /* Shadows with gold glow */
+    --shadow-glow: 0 0 40px hsl(43 50% 58% / 0.4);
     --shadow-card: 0 4px 20px hsl(222 47% 11% / 0.08);
     --shadow-elevated: 0 10px 40px hsl(222 47% 11% / 0.12);
     
@@ -81,15 +81,15 @@ All colors MUST be HSL.
     --muted: 217 19% 27%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 25 95% 53%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 43 50% 58%;
+    --accent-foreground: 222 47% 11%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 217 19% 27%;
     --input: 217 19% 27%;
-    --ring: 25 95% 53%;
+    --ring: 43 50% 58%;
   }
 }
 

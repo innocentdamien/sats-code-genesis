@@ -34,9 +34,9 @@ const Navigation = () => {
             <img 
               src={satscodeLogo} 
               alt="SatsCode Logo" 
-              className="w-12 h-12 transition-transform duration-300 group-hover:scale-110"
+              className="w-10 h-10 transition-transform duration-300 group-hover:scale-110"
             />
-            <span className="text-xl font-bold bg-gradient-accent bg-clip-text text-transparent">
+            <span className="text-2xl font-bold bg-gradient-accent bg-clip-text text-transparent">
               SatsCode
             </span>
           </button>

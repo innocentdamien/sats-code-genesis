@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Poppins', 'system-ui', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -48,8 +51,8 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         bitcoin: {
-          DEFAULT: "hsl(var(--bitcoin-orange))",
-          glow: "hsl(var(--bitcoin-orange-glow))",
+          DEFAULT: "hsl(var(--bitcoin-gold))",
+          glow: "hsl(var(--bitcoin-gold-glow))",
         },
         slate: {
           darker: "hsl(var(--slate-darker))",

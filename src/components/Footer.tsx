@@ -18,7 +18,7 @@ const Footer = () => {
               <img 
                 src={satscodeLogo} 
                 alt="SatsCode Logo" 
-                className="w-10 h-10"
+                className="w-8 h-8"
               />
               <span className="text-xl font-bold bg-gradient-accent bg-clip-text text-transparent">
                 SatsCode
