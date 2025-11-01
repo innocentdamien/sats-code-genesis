@@ -20,7 +20,7 @@ const AccessPage = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary-foreground">
             Your Bitcoin Toolkit
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+          <p className="text-xl text-white max-w-2xl mx-auto mb-8">
             A curated suite of tools to enhance your Bitcoin journey. From community engagement to automated execution.
           </p>
           <Button 

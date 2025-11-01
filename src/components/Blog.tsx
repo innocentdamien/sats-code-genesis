@@ -38,7 +38,7 @@ const Blog = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary-foreground">
             The SatsCode Blog
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-white max-w-2xl mx-auto">
             Insights, guides, and thoughts on Bitcoin, sovereignty, and the future of money.
           </p>
         </div>
@@ -54,15 +54,15 @@ const Blog = () => {
                   {article.category}
                 </Badge>
                 
-                <h3 className="text-2xl font-bold text-card-foreground leading-tight">
+                <h3 className="text-2xl font-bold text-white leading-tight">
                   {article.title}
                 </h3>
                 
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-white leading-relaxed">
                   {article.excerpt}
                 </p>
                 
-                <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                <div className="flex items-center gap-4 text-sm text-white">
                   <div className="flex items-center gap-1">
                     <Calendar className="w-4 h-4" />
                     <span>{article.date}</span>

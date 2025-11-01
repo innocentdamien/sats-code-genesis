@@ -93,7 +93,7 @@ const Hero = () => {
             <Button 
               variant="outline" 
               size="xl"
-              className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 hover:border-accent"
+              className="border-primary-foreground/20 text-black hover:text-primary-foreground hover:bg-primary-foreground/10 hover:border-accent"
               onClick={() => scrollToSection("story")}
             >
               Learn More

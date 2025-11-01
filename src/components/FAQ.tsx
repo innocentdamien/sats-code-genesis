@@ -40,7 +40,7 @@ const FAQ = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-white">
               Everything you need to know about SatsCode
             </p>
           </div>
@@ -52,10 +52,10 @@ const FAQ = () => {
                 value={`item-${index}`}
                 className="bg-slate-card border-border/50 rounded-2xl px-8 py-2"
               >
-                <AccordionTrigger className="text-left text-lg font-semibold text-card-foreground hover:text-accent hover:no-underline">
+                <AccordionTrigger className="text-left text-lg font-semibold text-white hover:text-accent hover:no-underline">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed text-base">
+                <AccordionContent className="text-white leading-relaxed text-base">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

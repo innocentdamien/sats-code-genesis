@@ -43,11 +43,11 @@ const BotCard = ({
       
       <div className="space-y-6 relative z-10">
         <div>
-          <h3 className="text-3xl font-bold text-card-foreground mb-2">{name}</h3>
+          <h3 className="text-3xl font-bold text-white mb-2">{name}</h3>
           <p className="text-accent font-semibold text-lg">{tagline}</p>
         </div>
 
-        <p className="text-muted-foreground leading-relaxed text-base">{description}</p>
+        <p className="text-white leading-relaxed text-base">{description}</p>
 
         {commandExample && (
           <div className="bg-slate-darker/50 rounded-xl p-4 font-mono text-sm flex items-center gap-3 border border-border/30">

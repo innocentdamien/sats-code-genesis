@@ -60,10 +60,10 @@ const ValueProposition = () => {
                 <div className="w-16 h-16 rounded-2xl bg-gradient-accent flex items-center justify-center mb-4 mx-auto shadow-glow group-hover:scale-110 transition-transform duration-300">
                   <Icon className="w-8 h-8 text-accent-foreground" />
                 </div>
-                <h3 className="text-lg font-bold mb-2 text-card-foreground">
+                <h3 className="text-lg font-bold mb-2 text-white">
                   {value.title}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-white leading-relaxed">
                   {value.description}
                 </p>
               </div>

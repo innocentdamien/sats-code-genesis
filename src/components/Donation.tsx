@@ -1,30 +1,17 @@
-import { Bitcoin, Copy, CheckCircle2 } from "lucide-react";
+import { Bitcoin, ExternalLink } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { toast } from "sonner";
 
 const Donation = () => {
-  const [copiedAddress, setCopiedAddress] = useState<string | null>(null);
+  const [isRedirecting, setIsRedirecting] = useState(false);
 
-  const addresses = [
-    {
-      name: "SatsCode Dev Fund",
-      address: "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
-      network: "Bitcoin Mainnet",
-    },
-    {
-      name: "Lightning Network",
-      address: "lnbc10u1p3pj257pp5qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
-      network: "Lightning",
-    },
-  ];
-
-  const copyToClipboard = (address: string, name: string) => {
-    navigator.clipboard.writeText(address);
-    setCopiedAddress(address);
-    toast.success(`${name} address copied!`);
-    setTimeout(() => setCopiedAddress(null), 2000);
+  const handleDonateClick = () => {
+    setIsRedirecting(true);
+    setTimeout(() => {
+      window.open('https://demo.lnbits.com/tipjar/NtZ3R7LWvSNuFHggqYw38f', '_blank');
+      setIsRedirecting(false);
+    }, 500);
   };
 
   return (
@@ -47,45 +34,36 @@ const Donation = () => {
             server costs, and creating more open-source tools for the community.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            {addresses.map((addr, index) => (
-              <Card 
-                key={index}
-                className="p-6 bg-slate-card border-border/50 hover:shadow-elevated transition-all duration-300"
-              >
-                <div className="space-y-4">
-                  <div>
-                    <h3 className="text-xl font-bold text-card-foreground mb-1">
-                      {addr.name}
-                    </h3>
-                    <p className="text-sm text-muted-foreground">{addr.network}</p>
-                  </div>
-                  
-                  <div className="bg-slate-darker/50 rounded-xl p-4 break-all font-mono text-sm text-foreground border border-border/30">
-                    {addr.address}
-                  </div>
-                  
-                  <Button
-                    variant="bitcoin"
-                    size="sm"
-                    className="w-full"
-                    onClick={() => copyToClipboard(addr.address, addr.name)}
-                  >
-                    {copiedAddress === addr.address ? (
-                      <>
-                        <CheckCircle2 className="w-4 h-4 mr-2" />
-                        Copied!
-                      </>
-                    ) : (
-                      <>
-                        <Copy className="w-4 h-4 mr-2" />
-                        Copy Address
-                      </>
-                    )}
-                  </Button>
+          <div className="max-w-md mx-auto mb-8">
+            <Card className="p-8 bg-slate-card border-border/50 hover:shadow-elevated transition-all duration-300 text-center">
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    Support SatsCode
+                  </h3>
+                  <p className="text-white/80">Help us build the Bitcoin future</p>
                 </div>
-              </Card>
-            ))}
+                
+                <Button
+                  variant="bitcoin"
+                  size="lg"
+                  className="w-full text-lg py-4"
+                  onClick={handleDonateClick}
+                  disabled={isRedirecting}
+                >
+                  {isRedirecting ? (
+                    <>
+                      Redirecting...
+                    </>
+                  ) : (
+                    <>
+                      <ExternalLink className="w-5 h-5 mr-2" />
+                      Donate Now
+                    </>
+                  )}
+                </Button>
+              </div>
+            </Card>
           </div>
 
           <p className="text-sm text-primary-foreground/60 italic">

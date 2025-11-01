@@ -33,7 +33,7 @@ const CAT = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary-foreground">
             Community. Action. Trust.
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-white max-w-2xl mx-auto">
             These three pillars are the foundation of everything we do at SatsCode.
           </p>
         </div>
@@ -51,11 +51,11 @@ const CAT = () => {
                     <Icon className="w-10 h-10 text-white" />
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-card-foreground">
+                  <h3 className="text-2xl font-bold text-white">
                     {pillar.title}
                   </h3>
                   
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-white leading-relaxed">
                     {pillar.description}
                   </p>
                 </div>

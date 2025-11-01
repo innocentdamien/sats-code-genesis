@@ -30,7 +30,7 @@ const Story = () => {
             The SatsCode Philosophy
           </h2>
           
-          <p className="text-xl text-muted-foreground text-center mb-16 leading-relaxed">
+          <p className="text-xl text-white text-center mb-16 leading-relaxed">
             Every great movement starts with a belief. Ours is simple: financial freedom is a fundamental human right.
           </p>
 
