@@ -1,5 +1,5 @@
 import { Twitter, Github, Mail } from "lucide-react";
-import satscodeLogo from "@/assets/satscode-logo.png";
+import satscodeLogo from "@/assets/new-satscode-logo.png";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -18,7 +18,7 @@ const Footer = () => {
               <img 
                 src={satscodeLogo} 
                 alt="SatsCode Logo" 
-                className="w-8 h-8"
+                className="h-8 w-8 md:h-10 md:w-10 object-contain"
               />
               <span className="text-xl font-bold bg-gradient-accent bg-clip-text text-transparent">
                 SatsCode

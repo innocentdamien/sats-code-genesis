@@ -1,7 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import satscodeLogo from "@/assets/satscode-logo.png";
+import satscodeLogo from "@/assets/new-satscode-logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +34,7 @@ const Navigation = () => {
             <img 
               src={satscodeLogo} 
               alt="SatsCode Logo" 
-              className="w-10 h-10 transition-transform duration-300 group-hover:scale-110"
+              className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 object-contain transition-transform duration-300 group-hover:scale-110"
             />
             <span className="text-2xl font-bold bg-gradient-accent bg-clip-text text-transparent">
               SatsCode
